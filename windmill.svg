@@ -1,0 +1,16 @@
+<svg width="532" height="317" viewBox="0 0 532 317" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Frame 1" clip-path="url(#clip0)">
+<rect width="532" height="317" fill="white"/>
+<path id="Base One" d="M266 284L304.971 323H227.029L266 284Z" fill="#C4C4C4"/>
+<rect id="Base Two" x="258" y="158" width="17" height="169" fill="#C4C4C4"/>
+<ellipse id="Center" cx="266" cy="134" rx="14" ry="13" fill="#C4C4C4"/>
+<rect id="Wing Three" x="381.534" y="192.675" width="7" height="128" transform="rotate(118.805 381.534 192.675)" fill="black"/>
+<rect id="Wing One" x="262" y="6.02126" width="7" height="128" transform="rotate(-0.173973 262 6.02126)" fill="black"/>
+<rect id="Wing One_2" x="266.143" y="129" width="7" height="128" transform="rotate(60.2618 266.143 129)" fill="black"/>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="532" height="317" fill="white"/>
+</clipPath>
+</defs>
+</svg>

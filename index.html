@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="./index.js"></script>
+    <title>Wind Mills</title>
+  </head>
+  <body>
+    <header><h2>Wind Mills</h2></header>
+    <main>
+      <section id="artwork">
+        <canvas id="canvas"></canvas>
+        <!-- <svg viewBox="0 0 532 317" id="SVG-WindMill">
+          <rect width="532" height="317" fill="white" />
+          <path
+            id="Base One"
+            d="M266 284L304.971 323H227.029L266 284Z"
+            fill="#C4C4C4"
+          />
+          <rect
+            id="Base Two"
+            x="258"
+            y="158"
+            width="17"
+            height="169"
+            fill="#C4C4C4"
+          />
+          <ellipse id="Center" cx="266" cy="134" rx="14" ry="13" fill="black" />
+          <g id="blades">
+            <rect
+              x="381.534"
+              y="192.675"
+              width="7"
+              height="128"
+              transform="rotate(118.805 381.534 192.675)"
+              fill="black"
+            />
+            <rect
+              x="262"
+              y="6.02126"
+              width="7"
+              height="128"
+              transform="rotate(-0.173973 262 6.02126)"
+              fill="black"
+            />
+            <rect
+              x="266.143"
+              y="129"
+              width="7"
+              height="128"
+              transform="rotate(60.2618 266.143 129)"
+              fill="black"
+            />
+          </g>
+        </svg> -->
+        <div class="controller-container">
+          <div class="controller-buttons">
+            <button onclick="changeSpeed(1)">Slow down</button>
+            <button onclick="changeSpeed(-1)">Speeed up</button>
+          </div>
+          <div class="speed-container">
+            <p>Animation speed: <span id="currentSpeed">10</span>s</p>
+            <button onclick="swapArt()" style="margin-top: 1rem">
+              Show <span id="currentArt">canvas</span>
+            </button>
+          </div>
+        </div>
+        <div class="button-container">
+          <button onclick="showDocumentation()">Show Docs</button>
+        </div>
+      </section>
+      <section id="documentation">
+        <div class="sidebars-container">
+          <div>
+            <h3>About the artwork</h3>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Necessitatibus recusandae excepturi facere dignissimos rerum sunt
+              velit officia dolorum perspiciatis culpa debitis accusantium
+              minima provident, repudiandae error deserunt incidunt perferendis
+              nihil.
+            </p>
+          </div>
+          <div>
+            <h3>Design choices</h3>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quas
+              animi quae esse, incidunt quam itaque. Sapiente, facilis ratione
+              cupiditate vel consequatur esse placeat, sunt quas veritatis qui
+              dolores quaerat.
+            </p>
+          </div>
+        </div>
+        <div class="button-container">
+          <button onclick="showArt()">Show art</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
