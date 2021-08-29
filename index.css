@@ -4,6 +4,7 @@
   overflow-x: hidden;
   overflow-y: hidden;
   font-family: "Roboto", "sans-serif";
+  overflow-y: auto;
 }
 
 body {
@@ -24,6 +25,20 @@ header {
 #documentation {
   display: none;
   flex-direction: column;
+  align-items: center;
+}
+.author-container {
+  width: 50%;
+  margin: auto;
+}
+
+.author-container h2 {
+  text-align: center;
+}
+
+.aboutproject-container {
+  padding-top: 1rem;
+  width: 50%;
 }
 
 .sidebars-container {
@@ -31,7 +46,6 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  min-height: 50vh;
 }
 
 .sidebars-container div {
@@ -65,7 +79,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 2rem;
+  padding-top: 2rem;
 }
 
 .controller-buttons {
@@ -83,6 +97,19 @@ button:hover {
 
 .controller-container button:hover {
   background-color: rgb(36, 179, 179);
+}
+
+#artwork {
+  display: flex;
+  flex-direction: column;
+}
+
+#currentArtHeader {
+  height: 5rem;
+  font-size: x-large;
+  width: 100vw;
+  text-align: center;
+  padding-top: 2rem;
 }
 
 .speed-container {

@@ -19,6 +19,7 @@
     <header><h2>Wind Mills</h2></header>
     <main>
       <section id="artwork">
+        <h3 id="currentArtHeader">SVG-Windmill MK 1</h3>
         <canvas id="canvas"></canvas>
         <svg viewBox="0 0 532 317" id="SVG-WindMill">
           <rect width="532" height="317" fill="white" />
@@ -74,33 +75,135 @@
               Show <span id="currentArt">canvas</span>
             </button>
           </div>
+          <div>
+            <div class="author-container">
+              <h2>About the author</h2>
+              <p style="padding-top: 1rem; padding-bottom: 1rem">
+                The author of the two artworks is a student at NTNU that is
+                currently studying Computer Science, he enjoys web development!
+              </p>
+            </div>
+          </div>
         </div>
         <div class="button-container">
           <button onclick="showDocumentation()">Show Docs</button>
         </div>
       </section>
       <section id="documentation">
+        <div class="aboutproject-container">
+          <h3>About the project</h3>
+          <p style="padding-top: 1rem; padding-bottom: 1rem">
+            The website <i>WindMills</i> is developed using plain HTML5/CSS and
+            JavaScript with jQuery. Its strucutred with flexbox. CSS is used
+            throughout to bring the website to life. Divs are mostly named as
+            containers where style is given, some ID's have been used in order
+            to make the JavaScript easier to maintain
+          </p>
+        </div>
         <div class="sidebars-container">
           <div>
-            <h3>About the artwork</h3>
-            <br />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Necessitatibus recusandae excepturi facere dignissimos rerum sunt
-              velit officia dolorum perspiciatis culpa debitis accusantium
-              minima provident, repudiandae error deserunt incidunt perferendis
-              nihil.
+            <h3>About the SVG</h3>
+            <p style="padding-top: 1rem; padding-bottom: 1rem">
+              The website contains two "artworks" replicating a wind mill. One
+              of these artworks is created in <strong>Figma</strong> where it is
+              then exported as an SVG file. In order to make this windmill come
+              to life we can use a svg tag &lt;b&gt; to mark the three blades.
+              Then we can use this container to apply a CSS animation where we
+              use <i>keyframes</i> to make it rotate. Seeing as the center of
+              the container wasnt in the circle of the windmill we have to
+              translate the origin (change the location of origio) of the
+              container to a new value. This new value was found by just
+              manually adjusting each value until It looked correct.
+            </p>
+
+            <h3>Flexbox</h3>
+            <p style="padding-bottom: 1rem; padding-top: 1rem">
+              In order to style this page flexbox has been used throughout to
+              give the website a structure that could work on any device and
+              browser size. Flexbox dynamically adjusts space between elemnents
+              depending on window size, giving the website appear to be the same
+              no matter the device being used. For example this documentation
+              page is divided into two sidebars. This is acheived by having a
+              container div displaying flex box and then having the
+              flex-direction be of a row, where we jusitify the content with
+              space inbetween. With CSS Media queries this can be further
+              improved by using various flex attrbiutes such as flex-wrap and
+              flex-shrink on elements if the overflow the width or height of the
+              device
+              <br />
+              <br />
+              On the art side we use flexbox in a column fashion to center
+              buttons and the artwork in the center and making them come below
+              each other.
+            </p>
+
+            <h3>jQuery</h3>
+            <p style="padding-bottom: 1rem; padding-top: 1rem">
+              jQuery has been used to make javascript code more easily readable
+              and taking up less space in the codeeditor (not memory). jQuery
+              functions also return the same element that we applied a function,
+              this inturn allows us to chain methods on top of each other making
+              the code in a way functional and again more readable. A example of
+              this is in plain JavaScript in order to select and grab an element
+              from the DOM you need to write the following line
+              document.querySelector(elementType) while in jQuery this can be
+              done like this $(elementType).
+              <br />
+              <br />
+              For example we can use the $() function to imperatively select
+              HTML DOMs from the website and dynamically alter styling. This is
+              done with the "show docs/show art" buttons where we hide/reveal
+              the respective elements
             </p>
           </div>
           <div>
-            <h3>Design choices</h3>
-            <br />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quas
-              animi quae esse, incidunt quam itaque. Sapiente, facilis ratione
-              cupiditate vel consequatur esse placeat, sunt quas veritatis qui
-              dolores quaerat.
+            <h3>About the Canvas</h3>
+            <p style="padding-top: 1rem; padding-bottom: 1rem">
+              The second of the artworks is the canvas. On the canvas we can
+              draw lines and make it look like a figure or shape. This is done
+              by three functions that draw lines at given coordinates. In order
+              to make the canvas appear animated, we need to use an inbuilt
+              function in JavaScripts window object, called
+              requestAnimationFrame, when calling this function we can pass a
+              callback function that calls itself and in this way we have an
+              infinite animation loop, recursively we're iterating and updating
+              the angle value for each of the three blades and doing this in 360
+              degree fashion. the 6 different coordinates x1, y1, ... x3, y3
+              where found by just adjusting the values and testing to check if
+              the wind mill blades looked like they were almost perpendicular
             </p>
+            <h3>Cross Browser Testing</h3>
+            <p style="padding-bottom: 1rem; padding-top: 1rem">
+              In order to test that the website works on multiple browser and by
+              using their developer tools you can scale the page to any size and
+              check if the website's style breaks for some sizes. Often times
+              there are cases where you need to have unique CSS attributes
+              depending on your browser, however no such CSS attributes where
+              needed to style this website. With tools such as Cypress you can
+              also test the content and structure of a website. It also does
+              alot of other types of test such as Unit Test ect, but thats
+              beyond this scope.
+            </p>
+            <h3>Code sources</h3>
+            <p style="padding-top: 1rem; padding-bottom: 1rem">
+              I've been messing around with CSS and Canvas animations for quite
+              some time, so there are really no code sources except my own that
+              I've gotten my inspiration. I cant include my github cause it
+              would give away my name..
+            </p>
+
+            <h3>Usefull resources</h3>
+            <p style="padding-top: 1rem; padding-bottom: 1rem">
+              Some usefull resources that all should know how to use are:
+            </p>
+
+            <p>Stack overflow <a href="https://stackoverflow.com">link</a></p>
+            <p>W3Schools <a href="https://www.w3schools.com/html">link</a></p>
+            <p>
+              MDN Docs for JS
+              <a href="https://developer.mozilla.org/en-US/">link</a>
+            </p>
+            <p>Figma <a href="https://www.figma.com">link</a></p>
           </div>
         </div>
         <div class="button-container">
