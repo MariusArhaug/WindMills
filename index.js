@@ -43,6 +43,7 @@ function swapArt() {
   if (isSVG) {
     display("#SVG-WindMill", "#canvas", "none", "block");
     $("#currentArtHeader").html("Canvas-WindMill Mk 1");
+    $("#currentArt").html("svg");
     const bladeStyles = getComputedStyle($("#blades")[0]);
     const currentDuration = convertTimeToNumber(bladeStyles.animationDuration);
     currentSpeed = 0.25 * currentDuration;
@@ -50,6 +51,7 @@ function swapArt() {
   } else {
     display("#SVG-WindMill", "#canvas", "block", "none");
     $("#currentArtHeader").html("SVG-WindMill Mk 1");
+    $("#currentArt").html("canvas");
   }
   isSVG = !isSVG;
 }
