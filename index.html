@@ -143,11 +143,11 @@
               and taking up less space in the codeeditor (not memory). jQuery
               functions also return the same element that we applied a function,
               this inturn allows us to chain methods on top of each other making
-              the code in a way functional and again more readable. A example of
-              this is in plain JavaScript in order to select and grab an element
-              from the DOM you need to write the following line
-              document.querySelector(elementType) while in jQuery this can be
-              done like this $(elementType).
+              the code in a way functional (but not without sideeffects) and
+              again more readable. A example of this is in plain JavaScript in
+              order to select and grab an element from the DOM you need to write
+              the following line document.querySelector(elementType) while in
+              jQuery this can be done like this $(elementType).
               <br />
               <br />
               For example we can use the $() function to imperatively select
@@ -176,13 +176,14 @@
             <p style="padding-bottom: 1rem; padding-top: 1rem">
               In order to test that the website works on multiple browser and by
               using their developer tools you can scale the page to any size and
-              check if the website's style breaks for some sizes. Often times
-              there are cases where you need to have unique CSS attributes
-              depending on your browser, however no such CSS attributes where
-              needed to style this website. With tools such as Cypress you can
-              also test the content and structure of a website. It also does
-              alot of other types of test such as Unit Test ect, but thats
-              beyond this scope.
+              check if the website's style breaks for some sizes, this does not
+              happen because the use of relative pixel values with
+              <strong>rem</strong> on margins and paddings. Often times there
+              are cases where you need to have unique CSS attributes depending
+              on your browser, however no such CSS attributes where needed to
+              style this website. With tools such as Cypress you can also test
+              the content and structure of a website. It also does alot of other
+              types of test such as Unit Test ect, but thats beyond this scope.
             </p>
             <h3>Code sources</h3>
             <p style="padding-top: 1rem; padding-bottom: 1rem">
